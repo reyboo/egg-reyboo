@@ -6,4 +6,5 @@
 module.exports = app => {
   const { router, controller } = app;
   router.get('/', controller.home.index);
+  router.post('sendSmsFromYunPian', '/api/sms/yunpian/sendSms', controller.sms.yunpian.sendSms);
 };
