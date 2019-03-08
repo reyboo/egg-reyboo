@@ -6,8 +6,14 @@ let key = 'f765d9bf2f34e742cc50b7dd66bdae80';
 
 class YunPianController extends Controller {
     async sendSms() {
-    const text = this.ctx.request.body;
-    this.ctx.body = key + '云片发短信1' + JSON.stringify(text) + `${JSON.stringify(text.name)}`;
+
+    const { ctx, config, logger } = this;
+    // 获取前端参数
+    const postData = ctx.request.body;
+    // 调用service中yunpian.sendSms方法
+    const info = await ctx.service.yunpian.sendSms(postData);
+
+    ctx.body = info;
   }
 }
 
