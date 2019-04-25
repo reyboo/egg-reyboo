@@ -5,6 +5,6 @@
 exports.security = false;
 
 exports.cors = {
-    enable: true,
-    package: 'egg-cors',
+  enable: true,
+  package: 'egg-cors',
 };

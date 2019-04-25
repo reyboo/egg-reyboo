@@ -2,10 +2,10 @@
 
 const Controller = require('egg').Controller;
 
-let key = 'f765d9bf2f34e742cc50b7dd66bdae80';
+const key = 'f765d9bf2f34e742cc50b7dd66bdae80';
 
 class YunPianController extends Controller {
-    async sendSms() {
+  async sendSms() {
 
     const { ctx, config, logger } = this;
     // 获取前端参数
